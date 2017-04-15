@@ -1,0 +1,196 @@
+/* animations */
+ @keyframes show-block {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-block {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.author {
+    animation: show-block 0.3s;
+}
+
+.timetable__section {
+    animation: show-block 0.3s;
+}
+
+/* timetable styles */
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+.flex-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    justify-content: center;
+}
+.flex-element {
+    flex: 0 0 auto;
+}
+main.flex-element {
+    flex: 1 1 auto;
+}
+.menu-item {
+    max-width: 280px;
+    min-width: 200px;
+    border: 2px solid rgba(255, 235, 238, 0.9);
+    cursor: pointer;
+    max-height: 100%;
+    padding: 15px 12px;
+    display: inline-block;
+    margin: 15px 0px;
+    text-align: center;
+}
+.menu__checkbox {
+    display: none;
+}
+input[type=checkbox]:checked + .menu-item {
+     border: 2px solid rgba(244, 67, 54, 0.8);
+}
+input#sdi:checked ~ .timetable .sdi {
+ display: none;
+ opacity: 1;
+}
+
+input#smd:checked ~ .timetable .smd {
+ display: none;
+ opacity: 1;
+}
+
+input#sd:checked ~ .timetable .sd {
+ display: none;
+ opacity: 1;
+}
+.menu-item:hover {
+    border: 2px solid rgba(244, 67, 54, 0.8);
+}
+.timetable {
+    list-style: none;
+}
+.timetable__section {
+    list-style: none;
+    opacity: 1;
+}
+.timetable__label {
+    font-weight: 700;
+    line-height: 50px;
+    border: 2px solid rgba(255, 193, 7, 0.5);
+    padding-left: 50px;
+    font-size: 20px;
+    display: block;
+}
+.timetable__label:hover {
+    border: 2px solid rgba(255, 193, 7, 0.9);
+}
+.timetable__child-section {
+    list-style: none;
+}
+.timetable-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+.timetable-item__logo {
+    height: 50px;
+}
+.timetable-item__label {
+    font-size: 18px;
+}
+.timetable-item__author {
+    font-size: 15px;
+    cursor: default;
+}
+.timetable-item__author:hover {
+    color: #F44336;
+}
+.timetable-item__author:hover > .author {
+    display: block;
+    opacity: 1;
+}
+.timetable-item__date-hide {
+    display: none;
+}
+.timetable-item__video {
+    color: #F44336;
+    text-decoration: none;
+    max-width: 80px;
+    text-align: center;
+    font-size: 15px;
+}
+.timetable-item__date {
+    text-align: center;
+    font-size: 14px;
+}
+.timetable-item__place {
+    display: block;
+}
+.past {
+    color: #9E9E9E;
+}
+/*
+Как я понял из формулировки задания - JS использовать не желательно, поэтому
+попап покывается средствами CSS
+*/
+.author { 
+        width: 400px;
+    height: 200px;
+    display: none;
+    opacity: 0;
+    background: #000;
+    position: fixed;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -390px;
+}
+.author__photo {
+    width: inherit;
+}
+.author__description {
+    text-align: justify;
+    background-color: #E0E0E0;
+    margin-top: -5px;
+    padding: 10px;
+    color: black;
+    font-size: 12px;
+}
+/* media styles */
+@media screen and (max-width: 600px) {
+    .menu {    
+        align-items: center;
+        flex-direction: column;
+    }
+    .timetable-item__label {
+        padding-right: 25px;
+    }
+    .timetable-item__author {
+        padding-right: 25px;
+    }
+    .timetable__label {
+        padding-left: 20px;
+    }
+    .author {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
