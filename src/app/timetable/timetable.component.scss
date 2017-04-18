@@ -1,0 +1,49 @@
+
+
+/* timetable styles */
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+.flex-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    justify-content: center;
+}
+.flex-element {
+    flex: 0 0 auto;
+}
+main.flex-element {
+    flex: 1 1 auto;
+}
+.timetable {
+    list-style: none;
+}
+.past {
+    color: #9E9E9E;
+}
+
+/* media styles */
+@media screen and (max-width: 600px) {
+    .menu {
+        align-items: center;
+        flex-direction: column;
+    }
+    .timetable-item__label {
+        padding-right: 25px;
+    }
+    .timetable-item__author {
+        padding-right: 25px;
+    }
+    .timetable__label {
+        padding-left: 20px;
+    }
+    .author {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}

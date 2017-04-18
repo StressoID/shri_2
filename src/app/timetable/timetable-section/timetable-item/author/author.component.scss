@@ -1,0 +1,21 @@
+.author {
+  width: 400px;
+  height: 200px;
+  background: #000;
+  position: fixed;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -390px;  animation: show-block 0.3s;
+  .author__photo {
+    width: inherit;
+  }
+  .author__description {
+    text-align: justify;
+    background-color: #E0E0E0;
+    margin-top: -5px;
+    padding: 10px;
+    color: black;
+    font-size: 12px;
+  }
+}

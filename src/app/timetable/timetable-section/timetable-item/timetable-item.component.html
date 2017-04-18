@@ -1,0 +1,13 @@
+<li class="timetable-item" *ngFor="let lecture of lectures">
+  <span class="timetable-item__label">{{lecture.title}}</span>
+  <a class="timetable-item__author">
+    <app-author [author]="lecture.author" [ngClass]="{
+      'timetable-item__author-active': author,
+      'timetable-item__author-non-active': !author
+    }"></app-author>
+    <span (mouseenter)="toggleAuthor()" (mouseleave)="toggleAuthor()">{{lecture.author.name}}</span>
+  </a>
+  <span class="timetable-item__date">{{lecture.date}}
+          <span class="timetable-item__place">{{lecture.classroom}}</span>
+      </span>
+</li>
