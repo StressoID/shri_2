@@ -1,8 +1,12 @@
+<app-side-panel></app-side-panel>
 <div class="flex-layout">
-    <main class="flex-element content">
-      <app-nav></app-nav>
-        <ul class="timetable">
-            <app-timetable-section></app-timetable-section>
-        </ul>
-    </main>
+  <main class="flex-element content">
+    <app-nav></app-nav>
+    <ul class="timetable">
+      <li class="timetable__section" *ngFor="let school of timeTableSection.schools">
+        <span class="timetable__label">{{school.title}}</span>
+        <app-timetable-section [school]="school"></app-timetable-section>
+      </li>
+    </ul>
+  </main>
 </div>

@@ -1,8 +1,8 @@
 <ul class="menu">
   <li class="menu__item"
-      *ngFor="let item of timetableService.timetable; let i = index;"
+      *ngFor="let item of timetableService.schools; let i = index;"
       [ngClass]="{active: item.active}"
       (click)="filter(i)">
-    <label class="menu__label">{{item.label}}</label>
+    <label class="menu__label">{{item.title}}</label>
   </li>
 </ul>

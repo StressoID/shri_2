@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TimetableService } from '../timetable.service';
 
 @Component({
@@ -7,10 +7,9 @@ import { TimetableService } from '../timetable.service';
   styleUrls: ['./timetable-section.component.scss']
 })
 export class TimetableSectionComponent implements OnInit {
+  @Input() school = [];
 
-  constructor(public timetableService: TimetableService) { }
+  constructor(public ttService: TimetableService) { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }

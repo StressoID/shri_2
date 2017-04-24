@@ -8,7 +8,7 @@ import { AuthorComponent } from './author/author.component';
 })
 export class TimetableItemComponent implements OnInit {
   @Input() lectures: Array<Object>;
-  @ViewChild(AuthorComponent) inputComponent: AuthorComponent;
+  @Input() schoolID: number;
   public author: boolean = false;
 
   constructor() { }

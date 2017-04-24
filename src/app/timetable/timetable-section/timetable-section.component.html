@@ -1,8 +1,3 @@
-<ng-container *ngFor="let section of timetableService.timetable">
-  <li class="timetable__section" *ngIf="section.active">
-    <span class="timetable__label">{{section.label}}</span>
-    <ul class="timetable__child-section">
-      <app-timetable-item [lectures]="section.lectures"></app-timetable-item>
-    </ul>
-  </li>
-</ng-container>
+<ul class="timetable__child-section">
+  <app-timetable-item *ngFor="let lecture of ttService.lectures" [lectures]="lecture"></app-timetable-item>
+</ul>

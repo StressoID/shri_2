@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
   ngOnInit() { }
 
   public filter(index) {
-    this.timetableService.timetable[index].active = !this.timetableService.timetable[index].active;
+    this.timetableService.schools[index].active = !this.timetableService.schools[index].active;
   }
 
 }

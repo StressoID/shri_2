@@ -1,0 +1,30 @@
+<div class="side-panel">
+  <div class="side-panel__item" *ngFor="let item of sidePanel; let i = index">
+    <button md-fab class="side-panel__button" [mdTooltip]="item.label" mdTooltipPosition="right" (click)="openBlock(i)">
+      <md-icon>{{item.icon}}</md-icon>
+    </button>
+    <md-card class="side-panel-block" *ngIf="item.active">
+      <md-card-header>
+        <md-card-title class="side-panel-block__title">{{item.label}}</md-card-title>
+      </md-card-header>
+      <md-card-content class="side-panel-block__content">
+        <ng-container *ngFor="let field of item.formFields">
+          <md-input-container *ngIf="field.type !== 'select'; else selectBlock">
+            <input mdInput [(ngModel)]="field.value" [placeholder]="field.title" [type]="field.type" value="" [name]="field.name">
+          </md-input-container>
+          <ng-template #selectBlock>
+            <md-select [placeholder]="field.title"  [(ngModel)]="field.value"  [attr.name]="field.name">
+              <md-option ngDefaultControl *ngFor="let food of timetableService[field.name]" [value]="food.id">
+                {{ food.title }}
+              </md-option>
+            </md-select>
+          </ng-template>
+        </ng-container>
+      </md-card-content>
+      <md-card-actions class="side-panel-block__actions">
+        <button color="warn" md-raised-button (click)="item.formHandler()">Сохранить</button>
+        <button color="warn" md-raised-button (click)="closeBlock(i)">Закрыть</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.side-panel {
+  position: fixed;
+  top: 30%;
+  margin-left: 10px;
+  width: 100%;
+  .side-panel__item {
+    margin-top: 10px;
+    .side-panel__button {
+      vertical-align: top;
+    }
+    .side-panel-block {
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.75);
+      margin-left: 20px;
+      width: 500px;
+      display: inline-block;
+      position: absolute;
+      .side-panel-block__title {
+        font-size: 20px;
+      }
+      .side-panel-block__content {
+        margin: 20px;
+        input {
+          margin: 5px 0;
+        }
+      }
+      .side-panel-block__actions {
+        float: right;
+      }
+      md-input-container {
+        width:100%;
+      }
+      md-select {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
+}

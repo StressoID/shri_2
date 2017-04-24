@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Школа разработки интерфейсов",
+    "id": 1,
+    "active": "true",
+    "students": 15
+  },
+
+  {
+    "title": "Школа мобильной разработки",
+    "id": 2,
+    "active": "true",
+    "students": 15
+  },
+
+  {
+    "title": "Школа дизайна",
+    "id": 3,
+    "active": "true",
+    "students": 15
+  }
+]

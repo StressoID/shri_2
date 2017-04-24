@@ -26,6 +26,23 @@ main.flex-element {
     color: #9E9E9E;
 }
 
+.timetable__section {
+  list-style: none;
+  opacity: 1;
+  animation: show-block 0.5s;
+  .timetable__label {
+    font-weight: 700;
+    line-height: 50px;
+    border: 2px solid rgba(255, 193, 7, 0.5);
+    padding-left: 70px;
+    font-size: 20px;
+    display: block;
+    &:hover {
+      border: 2px solid rgba(255, 193, 7, 0.9);
+    }
+  }
+}
+
 /* media styles */
 @media screen and (max-width: 600px) {
     .menu {
