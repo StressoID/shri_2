@@ -101,17 +101,12 @@ export class SidePanelComponent implements OnInit {
         type: 'number',
         value: ''
       },
-      {
-        name: 'description',
-        title: 'Описание',
-        value: ''
-      }
     ],
     formHandler: () => {
       this.timetableService.addOrReplaceSchool(
         this.sidePanel[2].formFields[0].value,
+        true,
         this.sidePanel[2].formFields[1].value,
-        this.sidePanel[2].formFields[2].value,
       );
       this.closeBlock(2);
     }

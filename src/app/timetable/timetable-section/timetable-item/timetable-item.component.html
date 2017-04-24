@@ -1,5 +1,4 @@
-<ng-container *ngFor="let lecture of lectures" >
-  <li class="timetable-item" *ngIf="lecture.school.id === schoolID" [id]="lecture.id">
+  <li class="timetable-item" [id]="lecture.id">
     <span class="timetable-item__label">{{lecture.title}}</span>
     <a class="timetable-item__author">
       <app-author [author]="lecture.author" [ngClass]="{
@@ -12,4 +11,3 @@
       <span class="timetable-item__place">{{lecture.classroom.title}}</span>
   </span>
   </li>
-</ng-container>

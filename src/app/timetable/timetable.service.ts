@@ -31,6 +31,12 @@ export class TimetableService {
     });
   }
 
+  public checkSchool(schoolID) {
+    return this.lectures.find((el, i ,arr) => {
+      return (el.school.id === schoolID);
+    })
+  }
+
   public lecSchoolByRange(schoolID, by, to) {
     let dateLec = [];
     this.lectures.forEach((elem) => {

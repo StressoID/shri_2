@@ -1,3 +1,5 @@
 <ul class="timetable__child-section">
-  <app-timetable-item *ngFor="let lecture of ttService.lectures" [lectures]="lecture"></app-timetable-item>
+  <ng-container *ngFor="let lecture of ttService.lectures" >
+    <app-timetable-item *ngIf="lecture.school.id === school.id" [lecture]="lecture"></app-timetable-item>
+  </ng-container>
 </ul>

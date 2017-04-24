@@ -7,8 +7,7 @@ import { AuthorComponent } from './author/author.component';
   styleUrls: ['./timetable-item.component.scss']
 })
 export class TimetableItemComponent implements OnInit {
-  @Input() lectures: Array<Object>;
-  @Input() schoolID: number;
+  @Input() lecture: Array<Object>;
   public author: boolean = false;
 
   constructor() { }
